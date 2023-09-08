@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Diaria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+      
+
+        .button {
+            display: inline-block;
+            background-color: #1a3a5c;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta Diaria</h1>
+        <form action="procesar_encuesta.php" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Matricula:</label>
+                <input type="text" id="matricula" name="matricula" required>
+            </div>
+
+            <div class="form-group">
+                <label>Sexo:</label>
+                <input type="radio" id="sexoH" name="sexo" value="H" required>
+                <label for="sexoH">H</label>
+                <input type="radio" id="sexoM" name="sexo" value="M">
+                <label for="sexoM">M</label>
+            </div>
+
+            <div class="form-group">
+                <label for="semestre">Semestre y Grupo:</label>
+                <input type="text" id="semestre" name="semestre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="materia">Materia:</label>
+                <input type="text" id="materia" name="materia" required>
+            </div>
+
+            <div class="form-group">
+                <label for="profesor">Profesor de la Materia:</label>
+                <input type="text" id="profesor" name="profesor" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tema">Tema que estás cursando actualmente:</label>
+                <input type="text" id="tema" name="tema" required>
+            </div>
+
+            <div class="form-group">
+                <label>1. ¿Qué desayunaste hoy?</label><br>
+                <input type="radio" id="desayunoLigeroCasa" name="desayuno" value="Ligero casa">
+                <label for="desayunoLigeroCasa">Ligero casa</label><br>
+                <input type="radio" id="desayunoPesadoCasa" name="desayuno" value="Pesado casa" required>
+                <label for="desayunoPesadoCasa">Pesado casa</label><br>
+                <input type="radio" id="desayunoLigeroCasa" name="desayuno" value="Ligero casa">
+                <label for="desayunoLigeroCasa">Ligero calle</label><br>
+                <input type="radio" id="desayunoLigeroCasa" name="desayuno" value="Ligero casa">
+                <label for="desayunoLigeroCasa">Pesado calle</label><br>
+                
+
+            </div>
+
+            <div class="form-group">
+                <label>2. ¿Qué cenaste hoy?</label><br>
+                <input type="radio" id="cenaLigeroCasa" name="cena" value="Ligero casa">
+                <label for="cenaLigeroCasa">Ligero casa</label><br>
+                <input type="radio" id="cenaPesadoCasa" name="cena" value="Pesado casa" required>
+                <label for="cenaPesadoCasa">Pesado casa</label><br>
+                <input type="radio" id="cenaPesadoCasa" name="cena" value="Pesado casa" required>
+                <label for="cenaPesadoCasa">Ligero calle</label><br>
+                <input type="radio" id="cenaPesadoCasa" name="cena" value="Pesado casa" required>
+                <label for="cenaPesadoCasa">Pesado calle</label><br>
+
+
+            </div>
+
+            <div class="form-group">
+                <label>3. De las siguientes bebidas, ¿cuál has consumido el día de hoy?</label><br>
+                <input type="checkbox" id="cafe" name="bebidas[]" value="Café">
+                <label for="cafe">Café</label><br>
+                <input type="checkbox" id="energetica" name="bebidas[]" value="Bebida energética">
+                <label for="energetica">Bebida energética</label><br>
+                <input type="checkbox" id="alcohol" name="bebidas[]" value="Alcohol">
+                <label for="alcohol">Alcohol</label><br>
+                <input type="checkbox" id="alcohol" name="bebidas[]" value="Alcohol">
+                <label for="alcohol">Ninguna de las anteriores</label><br>
+                
+            </div>
+
+            <div class="form-group">
+                <label>4. ¿Horas de sueño?</label><br>
+                <input type="radio" id="noDormiste" name="sueno" value="No dormiste" required>
+                <label for="noDormiste">No dormiste</label><br>
+                <input type="radio" id="sueno1-3" name="sueno" value="1-3 horas">
+                <label for="sueno1-3">1-3 horas</label><br>
+                <input type="radio" id="sueno1-3" name="sueno" value="1-3 horas">
+                <label for="sueno1-3">3-6 horas</label><br>
+                <input type="radio" id="sueno1-3" name="sueno" value="1-3 horas">
+                <label for="sueno1-3">6-8 horas</label><br>
+                <input type="radio" id="sueno1-3" name="sueno" value="1-3 horas">
+                <label for="sueno1-3">8-10 horas</label><br>
+
+
+
+
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label>5. ¿Cómo te encuentras el día de hoy?</label><br>
+                <input type="radio" id="feliz" name="estadoAnimo" value="Feliz" required>
+                <label for="feliz">Feliz</label><br>
+                <input type="radio" id="disgustado" name="estadoAnimo" value="Disgustado">
+                <label for="disgustado">Disgustado</label><br>
+                <input type="radio" id="disgustado" name="estadoAnimo" value="Disgustado">
+                <label for="disgustado">Enojado</label><br>
+                <input type="radio" id="disgustado" name="estadoAnimo" value="Disgustado">
+                <label for="disgustado">Triste</label><br>
+                <input type="radio" id="disgustado" name="estadoAnimo" value="Disgustado">
+                <label for="disgustado">Indiferente</label><br>
+                <input type="radio" id="disgustado" name="estadoAnimo" value="Disgustado">
+                <label for="disgustado">Nervioso</label><br>
+
+
+            </div>
+
+            <div class="form-group">
+                <label>6. ¿Te encuentras enfermo?</label><br>
+                <input type="radio" id="enfermoSi" name="enfermo" value="Si" required>
+                <label for="enfermoSi">Sí</label><br>
+                <input type="radio" id="enfermoNo" name="enfermo" value="No">
+                <label for="enfermoNo">No</label><br>
+            </div>
+
+            <div class="form-group">
+                <label>7. ¿Cómo es la relación entre tus compañeros?</label><br>
+                <input type="radio" id="relacionMala" name="relacionCompaneros" value="Mala" required>
+                <label for="relacionMala">Mala</label><br>
+                <input type="radio" id="relacionRegular" name="relacionCompaneros" value="Regular">
+                <label for="relacionRegular">Regular</label><br>
+                <input type="radio" id="relacionRegular" name="relacionCompaneros" value="Regular">
+                <label for="relacionRegular">Buena</label><br>
+                <input type="radio" id="relacionRegular" name="relacionCompaneros" value="Regular">
+                <label for="relacionRegular">Muy Buena</label><br>
+            </div>
+
+            <a href="" class="button">Enviar</a>
+            <br>
+            <br>
+            
+            
+                <a href="file:///C:/Users/aleja/OneDrive/Escritorio/Proyecto/index.html#inicio" class="button">Regresar</a>
+            
+
+           
+
+         
+              
+               
+                 
+            
+        </form>
+    </div>
+</body>
+</html>
