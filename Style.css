@@ -1,0 +1,9 @@
+.centrar{
+    width: 100px;
+}
+
+.conteiner{
+    display: flex;
+    justify-content: center;
+    
+}
