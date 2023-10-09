@@ -130,6 +130,31 @@
             <p>El nivel de estrés en los alumnos es una preocupación creciente en la sociedad actual. Los estudios han demostrado que factores como la carga académica, las expectativas sociales y la gestión del tiempo pueden contribuir al estrés en los estudiantes.</p>
             <p>Las encuestas pueden ser una herramienta valiosa para medir y comprender el nivel de estrés en los alumnos. Preguntas relacionadas con el equilibrio trabajo-vida, el apoyo académico y emocional, y las estrategias de afrontamiento pueden ayudar a identificar áreas problemáticas.</p>
             <p>Es importante abordar el estrés en los alumnos para promover un ambiente de aprendizaje saludable y el bienestar estudiantil.</p>
+            
+            <button onclick="abrirVentana()">Sobre Estrés de Alumnos</button>
+
+    <script>
+        var ventanaEmergente;
+
+        function abrirVentana() {
+            // Abre una ventana emergente y redirige a otra página HTML
+            ventanaEmergente = window.open("estresAlum.html", "VentanaEmergente", "width=600,height=400");
+
+            // Agrega un botón para cerrar la ventana emergente
+            var botonCerrar = document.createElement("button");
+            botonCerrar.textContent = "Cerrar Ventana";
+            botonCerrar.addEventListener("click", cerrarVentana);
+            ventanaEmergente.document.body.appendChild(botonCerrar);
+        }
+
+        function cerrarVentana() {
+            // Cierra la ventana emergente
+            if (ventanaEmergente) {
+                ventanaEmergente.close();
+            }
+        }
+    </script>
+            
         </section>
         <section>
             <h2>Horas de sueno de los Alumnos</h2>
