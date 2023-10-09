@@ -2,63 +2,128 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Información de Encuestas</title>
+    <title>Desempeño Academico</title>
+    <link rel="stylesheet" href="Style.css">
     <style>
         body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    }   
+    header {
+    text-align: center;
+    background-color: #1a3a5c;
+    color: #cbedf5;
+    padding: 10px;
+    border-radius: 30px;
+    }
+    h1 {
+    font-size: 24px;
+    }
+    p {
+    font-size: 16px;
+    }   
+
+    body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
         header {
+            background-color: #1a3a5c;
+            color: white;
+            padding: 1rem;
             text-align: center;
-            background-color: #007BFF;
-            color: #FFFFFF;
-            padding: 10px;
         }
-        h1 {
-            font-size: 24px;
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        p {
-            font-size: 16px;
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+        .centrar-imagen {
+            text-align: center;
         }
+        .navbar a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 12px 12px;
+            text-decoration: none;
+        }
+
+        .tamanio-imagen {
+            width: 100px;
+            height: 100px;
+            margin-left: 1590px;
+        }
+
     </style>
-    <link rel="stylesheet" href="Style.css">
+
+
 </head>
+
 <body>
-    <a href="https://www.itsoeh.edu.mx/front/">
-    <img src="img/Itsoeh.png" alt="logo ITSOEH" style="width: 100px;">
-    </a>
-    
-    <div class="conteiner">
-        <img class="centrar" src="img/ISIC.jpg" alt="Logo Itsoeh" >
+    <div class="itsoeh">
+        <a href="https://www.itsoeh.edu.mx/front/">
+            <img src="img/Itsoeh.png" alt="logo ITSOEH" width="150" >
+            <img class="tamanio-imagen" src="img/ISIC.jpg" alt="Logo Itsoeh" width="50" height="100">
+            </a>
+            
     </div>
 
+    <body>
+        <header>
+            <div class="navbar">
+                <h1>Factores que influyen en el desempeño académico</h1>
+                <a href="file:///C:/Users/aleja/OneDrive/Escritorio/Proyecto/login.html">Login</a>
+                <a href="encuestas/encuestas.html">Encuesta</a>
+                <a href="acercade.html">Acerca de</a>
+            </div>
+        </header>
     
-
-
-    <header>
-        <h1>Información de Encuestas</h1>
+    
+    
+        
     </header>
-    <div class="container">
+    
+   
+
+
+    <div class="contenido">
         <section>
-            <h2>¿Qué son las encuestas?</h2>
-            <p>Las encuestas son herramientas utilizadas para recopilar información y opiniones de un grupo de personas sobre un tema específico. Se realizan a través de preguntas estructuradas y pueden ser útiles para tomar decisiones informadas.</p>
+            <h2>Introducción</h2>
+            <p>Para el Instituto Tecnologico el desempeño academico de sus alumnos es de suma importancia, tiene como alta prioridad tener el menor numero de bajas durante la carrera, 
+                por ello se ha optado por recopilar informacion sobre el alumno en algunos aspectos de su vida cotidiana, esto para analizar si exiten factores secundarios que puedan afectar al desempeñi academico del alumno. </p>
         </section>
+        <div class="centrar-imagen">
+            <img src="img/itsoeh1.jpg" width="500">
+        </div>
         <section>
-            <h2>Tipos de encuestas</h2>
+            <h2>Objetivo</h2>
             <ul>
-                <li>Encuestas presenciales</li>
-                <li>Encuestas telefónicas</li>
-                <li>Encuestas en línea</li>
-                <li>Encuestas por correo</li>
+                <li>Analizar los datos obtenidos mediante la aplicación de encuestas a alumnos en la carrera de Sistemas Computacionales, para poder encontrar alguna solución, 
+                    que pueda ayudar a los alumnos a mantener un buen rendimiento académico, y así evitar la deserción académica.</li>
+                
             </ul>
         </section>
+
         <section>
-            <h2>Importancia de las encuestas</h2>
-            <p>Las encuestas son fundamentales para comprender las necesidades y opiniones de la audiencia. Pueden utilizarse en ámbitos como el marketing, la investigación académica, la política y más.</p>
+            <h2>Factores importantes a analizar</h2>
+            <p>Existen algunos factores importantes que creemos al alumno le puede influir demasiado, estos son los siguientes: </p>
         </section>
         <section>
             <h2>Nivel de Estrés en los Alumnos</h2>
@@ -72,10 +137,13 @@
             <p> El sueño influye en el equilibrio de las emociones. Una cantidad insuficiente de sueño puede contribuir a problemas de salud mental, como la ansiedad y la depresión. </p>
             <p> Enseñar a los alumnos sobre la importancia del sueño promueve la adopción de hábitos saludables desde una edad temprana.</p>
             <p>El sueño adecuado está vinculado a una mayor capacidad creativa y a una mayor capacidad para resolver problemas de manera innovadora. </p>
-        </section>
-    </div>
-    <h2>Mapa de la institución</h2>
-    <h2>Añadido por: Mauricio Peralta Nieves</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.297560895203!2d-99.2253881264602!3d20.20495241556628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d3d66879fea89d%3A0xdd896a66614b30fb!2sITSOEH!5e0!3m2!1ses!2smx!4v1694197580748!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="maps">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.297560895203!2d-99.2253881264602!3d20.20495241556628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d3d66879fea89d%3A0xdd896a66614b30fb!2sITSOEH!5e0!3m2!1ses!2smx!4v1694197580748!5m2!1ses!2smx"  allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade";></iframe>
+        
+             </div>
+        </section> 
+     
+    
 </body>
 </html>
