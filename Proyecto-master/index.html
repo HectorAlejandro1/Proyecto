@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Desempeño Academico</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    }   
+    header {
+    text-align: center;
+    background-color: #1a3a5c;
+    color: #cbedf5;
+    padding: 10px;
+    border-radius: 30px;
+    }
+    h1 {
+    font-size: 24px;
+    }
+    p {
+    font-size: 16px;
+    }   
+
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #1a3a5c;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+        .centrar-imagen {
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 12px 12px;
+            text-decoration: none;
+        }
+
+        .tamanio-imagen {
+            width: 100px;
+            height: 100px;
+            margin-left: 1590px;
+        }
+
+            
+        .button {
+            display: inline-block;
+            background-color: #1a3a5c;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .centrartexto{
+            text-align: center;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="itsoeh">
+        <a href="https://www.itsoeh.edu.mx/front/">
+            <img src="img/Itsoeh.png" alt="logo ITSOEH" width="150" >
+            <img class="tamanio-imagen" src="img/ISIC.jpg" alt="Logo Itsoeh" width="50" height="100">
+            </a>
+            
+    </div>
+
+    <body>
+        <header>
+            <div class="navbar">
+                <h1>Factores que influyen en el desempeño académico</h1>
+                <a href="file:///C:/Users/aleja/OneDrive/Escritorio/Proyecto/login.html">Login</a>
+                <a href="encuestas/encuestas.html">Encuesta</a>
+                <a href="acercade.html">Acerca de</a>
+                <a  onclick="abrirVentana()">Sobre Estrés de Alumnos</a>
+            </div>
+        </header>
+    
+    
+    
+        
+    </header>
+    
+   
+
+
+    <div class="contenido">
+        <section>
+            <h2>Introducción</h2>
+            <p>Para el Instituto Tecnologico el desempeño academico de sus alumnos es de suma importancia, tiene como alta prioridad tener el menor numero de bajas durante la carrera, 
+                por ello se ha optado por recopilar informacion sobre el alumno en algunos aspectos de su vida cotidiana, esto para analizar si exiten factores secundarios que puedan afectar al desempeñi academico del alumno. </p>
+        </section>
+        <div class="centrar-imagen">
+            <img src="img/itsoeh1.jpg" width="500">
+        </div>
+        <section>
+            <h2>Objetivo</h2>
+            <ul>
+                <li>Analizar los datos obtenidos mediante la aplicación de encuestas a alumnos en la carrera de Sistemas Computacionales, para poder encontrar alguna solución, 
+                    que pueda ayudar a los alumnos a mantener un buen rendimiento académico, y así evitar la deserción académica.</li>
+                
+            </ul>
+        </section>
+
+        <section>
+            <h2>Factores importantes a analizar</h2>
+            <p>Existen algunos factores importantes que creemos al alumno le puede influir demasiado, estos son los siguientes: </p>
+        </section>
+        <section>
+            <h2>Nivel de Estrés en los Alumnos</h2>
+            <p>El nivel de estrés en los alumnos es una preocupación creciente en la sociedad actual. Los estudios han demostrado que factores como la carga académica, las expectativas sociales y la gestión del tiempo pueden contribuir al estrés en los estudiantes.</p>
+            <p>Las encuestas pueden ser una herramienta valiosa para medir y comprender el nivel de estrés en los alumnos. Preguntas relacionadas con el equilibrio trabajo-vida, el apoyo académico y emocional, y las estrategias de afrontamiento pueden ayudar a identificar áreas problemáticas.</p>
+            <p>Es importante abordar el estrés en los alumnos para promover un ambiente de aprendizaje saludable y el bienestar estudiantil.</p>
+            
+    <script>
+        var ventanaEmergente;
+
+        function abrirVentana() {
+            // Abre una ventana emergente y redirige a otra página HTML
+            ventanaEmergente = window.open("estresAlum.html", "VentanaEmergente", "width=600,height=400");
+
+            // Agrega un botón para cerrar la ventana emergente
+            var botonCerrar = document.createElement("button");
+            botonCerrar.textContent = "Cerrar Ventana";
+            botonCerrar.addEventListener("click", cerrarVentana);
+            ventanaEmergente.document.body.appendChild(botonCerrar);
+        }
+
+        function cerrarVentana() {
+            // Cierra la ventana emergente
+            if (ventanaEmergente) {
+                ventanaEmergente.close();
+            }
+        }
+    </script>
+            
+        </section>
+        <section>
+            <h2>Horas de sueno de los Alumnos</h2>
+            <p>El sueño es fundamental para el bienestar y el rendimiento de los alumnos por varias razones</p>
+            <p> El sueño influye en el equilibrio de las emociones. Una cantidad insuficiente de sueño puede contribuir a problemas de salud mental, como la ansiedad y la depresión. </p>
+            <p> Enseñar a los alumnos sobre la importancia del sueño promueve la adopción de hábitos saludables desde una edad temprana.</p>
+            <p>El sueño adecuado está vinculado a una mayor capacidad creativa y a una mayor capacidad para resolver problemas de manera innovadora. </p>
+            <div class="maps">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.297560895203!2d-99.2253881264602!3d20.20495241556628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d3d66879fea89d%3A0xdd896a66614b30fb!2sITSOEH!5e0!3m2!1ses!2smx!4v1694197580748!5m2!1ses!2smx"  allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade";></iframe>
+        
+             </div>
+        </section> 
+     
+    
+</body>
+</html>
