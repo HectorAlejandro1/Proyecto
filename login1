@@ -1,0 +1,26 @@
+<?php
+$dbhost = "localhost";
+    $dbuser = "root";
+    $dbpass = "1234"
+
+    $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
+    if(!conn)
+    {
+        die("No hay conexión:".mysqli_connect_error());
+    }
+
+    $nombre = $_POST["usuario"];
+    $pass = $_POST["contraseña"];
+
+    $query = mysqli_query($conn,"SELECT * FROM usuarios  WHERE nombre = '".$nombre."' and contraseña = '".$pass."');
+    $nr = mysqli_num_rows($query);
+
+    if($nr == 1)
+    {
+        echo "Bienvenido:" .$nombre;
+    }
+    else if
+    {
+        echo "<script> alert('Datos erróneos'); window.location= login.html </script>";
+    }
+    ?>
